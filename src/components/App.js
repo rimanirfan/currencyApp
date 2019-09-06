@@ -1,12 +1,17 @@
 import React from 'react';
 
-import InputAmmount from './inputAmount/inputAmount';
+import InputAmount from './inputAmount/inputAmount';
 
 class App extends React.Component {
+
+    onAmountChange = amount => {
+        console.log('App: ', amount);
+    }
+
     render() {
         return (
             <div className="ui container">
-                <InputAmmount />
+                <InputAmount onAmountChange={this.onAmountChange} />
             </div>            
         );
     };
