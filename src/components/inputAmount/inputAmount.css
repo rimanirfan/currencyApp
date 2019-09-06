@@ -9,6 +9,6 @@ input[type=number]::-webkit-outer-spin-button {
     text-align: right;
 }
 
-.ui.form {
+.ui.form.border {
     border-bottom: 1px solid black;
 }

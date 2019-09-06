@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './inputAmount.css';
+import './InputAmount.css';
 
 class InputAmount extends React.Component {
     state = {
@@ -14,7 +14,7 @@ class InputAmount extends React.Component {
 
     render() {
         return (
-            <form className="ui form">
+            <form className="ui form border">
                 <div className="field">
                     <label>USD - United States Dollar</label>
                 </div>
