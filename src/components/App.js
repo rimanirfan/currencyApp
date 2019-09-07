@@ -6,6 +6,8 @@ import CurrenciesDropdown from './CurrenciesDropdown/CurrenciesDropdwon';
 import CurrencyList from './CurrencyList/CurrencyList';
 import exchangerates from '../api/exhangerates';
 
+import './App.css';
+
 class App extends React.Component {
 
     state = {
