@@ -43,11 +43,17 @@ class App extends React.Component {
     };
 
     deleteCurrency = (currency) => {
-
         this.setState({currencyList: this.state.currencyList.filter(item => item.symbol !== currency)});
     };
     
     onDropdownSelect = async (symbol) => {
+        const found = this.state.currencyList.find( item => item.symbol === symbol)
+
+        if(found) {
+            alert(`${found.symbol} currency already added to the app`);
+            return
+        };
+
         const response = await exchangerates.get('/latest', {
             params: {
                 symbols: symbol
