@@ -3,6 +3,7 @@ import React from 'react';
 import InputAmount from './InputAmount/InputAmount';
 import AddCurrency from './AddCurrency/AddCurrency';
 import CurrenciesDropdown from './CurrenciesDropdown/CurrenciesDropdwon';
+import CurrencyList from './CurrencyList/CurrencyList';
 import exchangerates from '../api/exhangerates';
 
 class App extends React.Component {
@@ -36,12 +37,13 @@ class App extends React.Component {
     onAmountChange = amount => {
         this.setState({amount});
     };
-    
+
     render() {
         console.log(this.state.currencyList);
         return (
             <div className="ui container">
                 <InputAmount onAmountChange={this.onAmountChange} />
+                <CurrencyList amount={this.state.amount} currencyList={this.state.currencyList} />
                 {!this.state.isAddCurrency && <AddCurrency addCurrency={this.triggerAddCurrency} />}
                 {this.state.isAddCurrency && <CurrenciesDropdown addCurrency={this.triggerAddCurrency} selectCurrency={this.onDropdownSelect} />}
             </div>            
