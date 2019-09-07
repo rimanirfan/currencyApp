@@ -19,3 +19,7 @@
 .border-right {
     border-right: 1px black solid;
 }
+
+.btn-delete {
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './CurrencyItem.css';
 
-const CurrencyItem = ({amount, currency}) => {
+const CurrencyItem = ({amount, currency, deleteCurrency}) => {
     return (
         <div className="ui aligned centered grid currency-item">
             <div className="fourteen wide column border-right">
@@ -13,7 +13,7 @@ const CurrencyItem = ({amount, currency}) => {
                 <div className="text-bold text-italic">{currency.symbol} - {currency.detail}</div>
                 <div className="text-italic">1 USD = {currency.symbol} {currency.rate}</div>
             </div>
-            <div className="two wide middle aligned column">(-)</div>
+            <div className="two wide middle aligned column btn-delete" onClick={() => deleteCurrency(currency.symbol)}>(-)</div>
         </div>
     );
 };

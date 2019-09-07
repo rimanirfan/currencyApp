@@ -31,7 +31,7 @@ class App extends React.Component {
                 return 'Canadian Dollar';
             case 'INR':
                 return 'Indian Rupee';
-            case 'KWR':
+            case 'KRW':
                 return 'South Korean Won';
             case 'MYR':
                 return 'Malaysian Ringgit';
@@ -40,6 +40,11 @@ class App extends React.Component {
             default:
                 return '';
         }
+    };
+
+    deleteCurrency = (currency) => {
+
+        this.setState({currencyList: this.state.currencyList.filter(item => item.symbol !== currency)});
     };
     
     onDropdownSelect = async (symbol) => {
@@ -57,6 +62,7 @@ class App extends React.Component {
             rate: this.state.rate
         };
         this.setState({ currencyList: [...this.state.currencyList, addExchange]});
+        this.triggerAddCurrency();
     };
 
     triggerAddCurrency = () => {
@@ -71,7 +77,7 @@ class App extends React.Component {
         return (
             <div className="ui container">
                 <InputAmount onAmountChange={this.onAmountChange} amount={this.state.amount} />
-                <CurrencyList amount={this.state.amount} currencyList={this.state.currencyList} />
+                <CurrencyList amount={this.state.amount} currencyList={this.state.currencyList} deleteCurrency={this.deleteCurrency} />
                 {!this.state.isAddCurrency && <AddCurrency addCurrency={this.triggerAddCurrency} />}
                 {this.state.isAddCurrency && <CurrenciesDropdown addCurrency={this.triggerAddCurrency} selectCurrency={this.onDropdownSelect} />}
             </div>            
