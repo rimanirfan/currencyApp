@@ -1,0 +1,21 @@
+.ui.grid.currency-item {
+    margin: 2rem 0;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-bold {
+    font-weight: 800;
+}
+
+.border-right {
+    border-right: 1px black solid;
+}
