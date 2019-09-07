@@ -4,7 +4,7 @@ const CurrencyItem = ({amount, currency}) => {
     return (
         <div>
             <div>{currency.symbol} {currency.rate * amount}</div>
-            <div>{currency.symbol}</div>
+            <div>{currency.symbol} - {currency.detail}</div>
             <div>1 USD = {currency.symbol} {currency.rate}</div>
         </div>
     );

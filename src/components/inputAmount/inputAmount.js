@@ -3,12 +3,8 @@ import React from 'react';
 import './InputAmount.css';
 
 class InputAmount extends React.Component {
-    state = {
-        amount: '10.0000'
-    }
 
     onInputChange = (event) => {
-        this.setState({ amount: event.target.value });
         this.props.onAmountChange(event.target.value);
     };
 
@@ -23,7 +19,7 @@ class InputAmount extends React.Component {
                     <input 
                         className="form-input"
                         type="number" 
-                        value={this.state.amount}
+                        value={this.props.amount}
                         onChange={this.onInputChange}
                     />
                 </div>
