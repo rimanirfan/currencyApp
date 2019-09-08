@@ -12,7 +12,7 @@ class InputAmount extends React.Component {
         return (
             <form className="ui form border">
                 <div className="field">
-                    <label>USD - United States Dollar</label>
+                    <label className="header">USD - United States Dollar</label>
                 </div>
                 <div className="inline fields">
                     <label>USD</label>

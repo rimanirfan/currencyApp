@@ -7,9 +7,19 @@ input[type=number]::-webkit-outer-spin-button {
 .ui.form input[type=number]{
     border: none;
     text-align: right;
+    font-weight: 700;
 }
 
 .ui.form.border {
     border-bottom: 1px solid black;
     margin-bottom: 2rem;
+}
+
+.ui.form .inline.fields {
+  font-size: 1.2rem;
+}
+
+label {
+  font-weight: 700;
+  font-style:italic;
 }
